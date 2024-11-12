@@ -60,10 +60,10 @@ window.addEventListener('DOMContentLoaded', event => {
         const imageContainer = document.getElementById('imageContainer');
         if (imageContainer.style.display === 'none') {
             imageContainer.style.display = 'block';
-            this.textContent = '이미지 숨기기';
+            this.textContent = '포스터 숨기기';
         } else {
             imageContainer.style.display = 'none';
-            this.textContent = '이미지 보기';
+            this.textContent = '더 자세히 보기';
         }
     });
 
