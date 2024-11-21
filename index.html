@@ -22,7 +22,27 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#page-top">분리수거 생활화</a>
+                <a class="navbar-brand" href="#page-top">
+    <span id="visitor-count" style="color: black; font-size: 1rem;">방문자 수: </span>
+    <script type="text/javascript">
+        // 방문자 카운터 데이터를 가져오는 함수
+        const loadVisitorCount = () => {
+            const counterElement = document.getElementById("visitor-count");
+            fetch("https://counter6.optistats.ovh/private/counter.php?c=5gbs8lr5kd3xc9nzc185bfq2sxnf5wat")
+                .then(response => response.text())
+                .then(count => {
+                    counterElement.textContent = `방문자 수: ${count}`;
+                })
+                .catch(error => {
+                    console.error("Error loading visitor count:", error);
+                });
+        };
+
+        // 페이지 로드 시 카운터 불러오기
+        window.onload = loadVisitorCount;
+    </script>
+</a>
+
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0">
